@@ -24,3 +24,7 @@ console.log(name1);
 let age = 30;
 console.log(age);
 // This will cause a TypeScript error
+function multiply(x, y) {
+    return x * y;
+}
+console.log(multiply(5, 10)); // Output: 50
