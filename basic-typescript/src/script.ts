@@ -44,3 +44,11 @@ console.log(number);
 number.push(6);
 console.log(number);
 // This will cause a TypeScript error
+const person = {
+  name: "John Doe",
+  age: 30,
+  status: "active",
+};
+console.log(person);
+person.name = "Jane Smith";
+console.log(person);
