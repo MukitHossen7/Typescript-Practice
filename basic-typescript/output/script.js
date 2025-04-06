@@ -8,3 +8,9 @@ age = "20";
 console.log(age);
 age = true;
 console.log(age);
+//function declaration
+function add(a, b) {
+    return a + b;
+}
+console.log(add(2, 3));
+//object declaration
