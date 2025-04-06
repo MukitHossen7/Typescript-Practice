@@ -33,3 +33,14 @@ function multiply(x: number, y: number): number {
   return x * y;
 }
 console.log(multiply(5, 10)); // Output: 50
+
+const fruits = ["apple", "banana", "orange"];
+console.log(fruits);
+fruits.push("grape");
+console.log(fruits);
+
+const number = [1, 2, 3, 4, 5];
+console.log(number);
+number.push(6);
+console.log(number);
+// This will cause a TypeScript error
