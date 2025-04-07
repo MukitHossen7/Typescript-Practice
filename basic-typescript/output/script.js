@@ -1,8 +1,9 @@
 "use strict";
-function add(a, b, c = 0) {
-    return a + b + c;
-}
-console.log(add(10, 15));
+//type related data
+const add = (a, b, c) => {
+    return a + b + (c || 0);
+};
+console.log(add(10, 15, 2));
 const add2 = (a, b, c = 0) => {
     return a + b + c;
 };
@@ -17,3 +18,9 @@ const myNames = (a, b, c = "true") => {
     // return `${a} ${b}`;
 };
 myNames("Hello", "World", "false");
+const person = {
+    name: "John",
+    age: "30",
+    isActive: true,
+};
+console.log(person);
