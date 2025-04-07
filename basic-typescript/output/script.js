@@ -11,7 +11,9 @@ const myFunction = () => {
     console.log("Hello World");
 };
 myFunction();
-const myNames = (a, b) => {
+const myNames = (a, b, c = "true") => {
+    console.log(c);
     console.log(`${a} ${b}`);
+    return `${a} ${b}`;
 };
-myNames("Hello", "World");
+myNames("Hello", "World", "false");

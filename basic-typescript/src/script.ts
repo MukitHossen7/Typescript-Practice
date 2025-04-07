@@ -13,8 +13,10 @@ const myFunction: Function = () => {
 };
 myFunction();
 
-const myNames = (a: string, b: string) => {
+const myNames = (a: string, b: string, c: string = "true"): string => {
+  console.log(c);
   console.log(`${a} ${b}`);
+  return `${a} ${b}`;
 };
 
-myNames("Hello", "World");
+myNames("Hello", "World", "false");
