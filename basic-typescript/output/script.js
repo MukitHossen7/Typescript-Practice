@@ -1,3 +1,4 @@
+"use strict";
 // type userInfo = {
 //   name: string;
 //   age: number | string;
@@ -14,19 +15,22 @@
 //   email: "mim@gmail.com",
 // };
 // console.log(person);
-const objectFunction = (obj) => {
-    const output = `Name: ${obj.name}, Age: ${obj.age}, Is Student: ${obj.isStudent}, Hobbies: ${obj.hobbies.join(", ")}, Address: ${obj.address.street}, ${obj.address.city}`;
-    console.log(output);
-};
-objectFunction({
+const person = {
     name: "John",
     age: 30,
     isStudent: false,
-    hobbies: ["reading", "gaming"],
+    hobbies: ["reading", "20"],
     address: {
         street: "123 Main St",
         city: "New York",
     },
-});
-console.log("Hello World");
-export {};
+};
+console.log(person);
+const user = (obj) => {
+    console.log(`username: ${obj.name}, Email: ${obj.email}`);
+};
+user({ name: "Raju", email: "raju@gmail.com" });
+const multiply = (a, b) => {
+    return a * b;
+};
+console.log(multiply(2, 3)); // Output: 6
