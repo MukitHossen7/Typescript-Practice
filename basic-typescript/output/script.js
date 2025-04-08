@@ -15,6 +15,29 @@
 //   email: "mim@gmail.com",
 // };
 // console.log(person);
+// class Person {
+//   name: string;
+//   age: number | string;
+//   country: string;
+//   constructor(name: string, age: number | string, country: string) {
+//     this.name = name;
+//     this.age = age;
+//     this.country = country;
+//   }
+//   user(): string {
+//     return `Name: ${this.name}, Age: ${this.age}, Country: ${this.country}`;
+//   }
+// }
+// const person1 = new Person("John", "30", "USA");
+// console.log(person1);
+// console.log(person1.user());
+// const person2 = new Person("Jane", 25, "Canada");
+// console.log(person2);
+// console.log(person2.user());
+// const userArray: Person[] = [person1, person2];
+// userArray.push(person1);
+// userArray.push(person2);
+// console.log(userArray);
 class Person {
     constructor(name, age, country) {
         this.name = name;
@@ -27,11 +50,5 @@ class Person {
 }
 const person1 = new Person("John", "30", "USA");
 console.log(person1);
-console.log(person1.user());
 const person2 = new Person("Jane", 25, "Canada");
 console.log(person2);
-console.log(person2.user());
-const userArray = [person1, person2];
-// userArray.push(person1);
-// userArray.push(person2);
-console.log(userArray);
