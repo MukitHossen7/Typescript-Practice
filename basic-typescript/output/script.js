@@ -1,4 +1,3 @@
-"use strict";
 // type userInfo = {
 //   name: string;
 //   age: number | string;
@@ -38,16 +37,7 @@
 // userArray.push(person1);
 // userArray.push(person2);
 // console.log(userArray);
-class Person {
-    constructor(name, age, country) {
-        this.name = name;
-        this.age = age;
-        this.country = country;
-    }
-    user() {
-        return `Name: ${this.name}, Age: ${this.age}, Country: ${this.country}`;
-    }
-}
+import { Person } from "./Person.js";
 const person1 = new Person("John", "30", "USA");
 console.log(person1);
 const person2 = new Person("Jane", 25, "Canada");
