@@ -11,3 +11,5 @@ export class Person {
     return `Name: ${this.name}, Age: ${this.age}, Country: ${this.country}`;
   }
 }
+
+console.log("hello");

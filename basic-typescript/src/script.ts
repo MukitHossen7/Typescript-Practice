@@ -39,9 +39,41 @@
 // userArray.push(person1);
 // userArray.push(person2);
 // console.log(userArray);
-import { Person } from "./Person.js";
+// import { Person } from "./Person.js";
 
-const person1 = new Person("John", "30", "USA");
-console.log(person1);
-const person2 = new Person("Jane", 25, "Canada");
-console.log(person2);
+// const person1 = new Person("John", "30", "USA");
+// console.log(person1);
+// const person2 = new Person("Jane", 25, "Canada");
+// console.log(person2);
+
+// interface Person {
+//   name: string;
+//   age: number;
+//   isStudent: boolean;
+//   hobbies: string[];
+//   address: {
+//     street: string;
+//     city: string;
+//   };
+// }
+import { Person } from "./Interfaces.js";
+const objectFunction = (obj: Person) => {
+  const output = `Name: ${obj.name}, Age: ${obj.age}, Is Student: ${
+    obj.isStudent
+  }, Hobbies: ${obj.hobbies.join(", ")}, Address: ${obj.address.street}, ${
+    obj.address.city
+  }`;
+  console.log(output);
+};
+objectFunction({
+  name: "John",
+  age: 30,
+  isStudent: false,
+  hobbies: ["reading", "gaming"],
+  address: {
+    street: "123 Main St",
+    city: "New York",
+  },
+});
+
+console.log("Hello World");
