@@ -35,8 +35,7 @@ const person2 = new Person("Jane", 25, "Canada");
 console.log(person2);
 console.log(person2.user());
 
-const userArray: (string | number)[] = [];
-userArray.push("John");
-userArray.push("Jane");
-userArray.push(30);
+const userArray: Person[] = [person1, person2];
+// userArray.push(person1);
+// userArray.push(person2);
 console.log(userArray);
