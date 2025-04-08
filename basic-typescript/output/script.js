@@ -1,26 +1,12 @@
 "use strict";
-//type related data
-const add = (a, b, c) => {
-    return a + b + (c || 0);
+let add;
+add = (a, b) => {
+    return a + b;
 };
-console.log(add(10, 15, 2));
-const add2 = (a, b, c = 0) => {
-    return a + b + c;
-};
-console.log(add2(10, 15));
-const myFunction = () => {
-    console.log("Hello World");
-};
-myFunction();
-const myNames = (a, b, c = "true") => {
-    console.log(c);
-    console.log(`${a} ${b}`);
-    // return `${a} ${b}`;
-};
-myNames("Hello", "World", "false");
+console.log(add(2, 3)); // Output: 5"));
 const person = {
     name: "John",
-    age: "30",
-    isActive: true,
+    age: 30,
+    email: "mim@gmail.com",
 };
 console.log(person);

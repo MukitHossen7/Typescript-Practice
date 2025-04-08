@@ -1,41 +1,16 @@
-type addFunction = (a: number, b: number, c?: number) => number;
-type nameStringFunction = (a: string, b: string, c?: string) => void;
-
-type user = {
+type userInfo = {
   name: string;
   age: number | string;
-  isActive: boolean;
+  email: string;
 };
-
-//type related data
-
-const add: addFunction = (a, b, c) => {
-  return a + b + (c || 0);
+let add: (a: number, b: number) => number;
+add = (a, b) => {
+  return a + b;
 };
-console.log(add(10, 15, 2));
-
-const add2: addFunction = (a, b, c = 0): number => {
-  return a + b + c;
-};
-console.log(add2(10, 15));
-
-const myFunction: Function = () => {
-  console.log("Hello World");
-};
-myFunction();
-
-const myNames: nameStringFunction = (a, b, c = "true") => {
-  console.log(c);
-  console.log(`${a} ${b}`);
-  // return `${a} ${b}`;
-};
-
-myNames("Hello", "World", "false");
-
-const person: user = {
+console.log(add(2, 3)); // Output: 5"));
+const person: userInfo = {
   name: "John",
-  age: "30",
-  isActive: true,
+  age: 30,
+  email: "mim@gmail.com",
 };
 console.log(person);
-1;
