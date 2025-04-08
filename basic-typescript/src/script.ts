@@ -38,3 +38,4 @@ const person: user = {
   isActive: true,
 };
 console.log(person);
+1;
