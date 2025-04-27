@@ -153,3 +153,7 @@ const exampleArray: (number | string | boolean)[] = [
 console.log(exampleArray);
 
 console.log(anyArray);
+
+const massage: string = "hello world today is a good day to learn typescript";
+console.log(massage);
+console.log(massage.split(" "));

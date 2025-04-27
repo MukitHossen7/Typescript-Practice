@@ -143,3 +143,6 @@ const exampleArray = [
 ];
 console.log(exampleArray);
 console.log(anyArray);
+const massage = "hello world today is a good day to learn typescript";
+console.log(massage);
+console.log(massage.split(" "));
