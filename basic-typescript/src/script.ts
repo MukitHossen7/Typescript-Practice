@@ -83,40 +83,47 @@
 // const person1 = new Person("John", 30, "USA");
 // console.log(person1);
 
-interface Person {
-  name: string;
-  age: number;
-  isStudent: boolean;
-  hobbies: string[];
-  address: {
-    street: string;
-    city: string;
-  };
-}
-const person: Person = {
-  name: "John",
-  age: 30,
-  isStudent: false,
-  hobbies: ["reading", "20"],
-  address: {
-    street: "123 Main St",
-    city: "New York",
-  },
-};
-console.log(person);
-interface User {
-  name: string;
-  email: string;
-}
-const user = (obj: User) => {
-  console.log(`username: ${obj.name}, Email: ${obj.email}`);
-};
-user({ name: "Raju", email: "raju@gmail.com" });
+// interface Person {
+//   name: string;
+//   age: number;
+//   isStudent: boolean;
+//   hobbies: string[];
+//   address: {
+//     street: string;
+//     city: string;
+//   };
+// }
+// const person: Person = {
+//   name: "John",
+//   age: 30,
+//   isStudent: false,
+//   hobbies: ["reading", "20"],
+//   address: {
+//     street: "123 Main St",
+//     city: "New York",
+//   },
+// };
+// console.log(person);
+// interface User {
+//   name: string;
+//   email: string;
+// }
+// const user = (obj: User) => {
+//   console.log(`username: ${obj.name}, Email: ${obj.email}`);
+// };
+// user({ name: "Raju", email: "raju@gmail.com" });
 
-interface MultiplyFunc {
-  (a: number, b: number): number;
-}
-const multiply: MultiplyFunc = (a, b) => {
-  return a * b;
+// interface MultiplyFunc {
+//   (a: number, b: number): number;
+// }
+// const multiply: MultiplyFunc = (a, b) => {
+//   return a * b;
+// };
+// console.log(multiply(2, 3)); // Output: 6
+
+const add = (a: number, b: number, ...c: number[]): void => {
+  console.log(a);
+  console.log(b);
+  console.log(c);
 };
-console.log(multiply(2, 3)); // Output: 6
+add(2, 3, 5, 4, 10, 15, 20, 25); // Output: 5
