@@ -120,3 +120,26 @@ const add = (a, b, ...c) => {
     console.log(c);
 };
 add(2, 3, 5, 4, 10, 15, 20, 25); // Output: 5
+const anyArray = [
+    2,
+    "hello",
+    true,
+    5.5,
+    "world",
+    10,
+    false,
+    20,
+];
+console.log(anyArray);
+console.log("copy array", [...anyArray]);
+const exampleArray = [
+    ...anyArray,
+    1,
+    2,
+    "hello",
+    "world",
+    3,
+    4,
+];
+console.log(exampleArray);
+console.log(anyArray);
