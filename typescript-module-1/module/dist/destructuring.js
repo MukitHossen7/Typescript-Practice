@@ -28,6 +28,6 @@
     console.log(country);
     console.log(role);
     const numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const [, , , , a] = numberArray;
+    const [, , , ...a] = numberArray;
     console.log(a); // 5
 }
