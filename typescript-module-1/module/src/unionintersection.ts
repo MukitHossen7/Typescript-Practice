@@ -35,4 +35,40 @@
     gender: "Male",
   };
   console.log(person);
+
+  // Intersection
+
+  type Student1 = {
+    name: string;
+    age: number;
+  };
+  type Student2 = {
+    studentId: number;
+    gender: "Male" | "Female" | "Other";
+  };
+  type Student = Student1 & Student2;
+  const student: Student = {
+    name: "Alice",
+    age: 20,
+    studentId: 12345,
+    gender: "Female",
+  };
+  console.log(student);
+  type Employee = {
+    name: string;
+    age: number;
+    position: string;
+  };
+  type Manager = {
+    name: string;
+    skills: string[];
+  };
+  type ManagerEmployee = Employee & Manager;
+  const managerEmployee: ManagerEmployee = {
+    name: "John Doe",
+    age: 30,
+    position: "Manager",
+    skills: ["Leadership", "Communication"],
+  };
+  console.log(managerEmployee);
 }

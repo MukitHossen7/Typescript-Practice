@@ -26,4 +26,18 @@
         gender: "Male",
     };
     console.log(person);
+    const student = {
+        name: "Alice",
+        age: 20,
+        studentId: 12345,
+        gender: "Female",
+    };
+    console.log(student);
+    const managerEmployee = {
+        name: "John Doe",
+        age: 30,
+        position: "Manager",
+        skills: ["Leadership", "Communication"],
+    };
+    console.log(managerEmployee);
 }
