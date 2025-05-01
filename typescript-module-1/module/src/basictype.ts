@@ -2,6 +2,8 @@
 let personName: string = "John Doe";
 personName = "Jane Doe";
 
+let a: string = "Hello,";
+
 // number
 let age: number = 30;
 
