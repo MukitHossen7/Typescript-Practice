@@ -12,4 +12,16 @@
     }
   };
   checkValue(null);
+
+  //Never type
+  //   const throwError = (message: string): never => {
+  //     throw new Error(message);
+  //   };
+  //   console.log(throwError("This is an error message"));
+  //   const infiniteLoop = (): never => {
+  //     while (true) {
+  //       console.log("i am infinite");
+  //     }
+  //   };
+  //   console.log(infiniteLoop());
 }
