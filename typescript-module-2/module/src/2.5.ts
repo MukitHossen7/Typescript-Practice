@@ -27,5 +27,18 @@
   const add2 = add<string>("John Doe");
   console.log(add2);
 
+  const doubleArray = <T extends number>(arr: T[]) => {
+    const result = arr.map((item) => item * 2);
+    console.log(result);
+  };
+  doubleArray<number>([1, 2, 3, 4, 5]);
+
+  const logItems = <T>(item: T[]): void => {
+    item.forEach((item) => {
+      console.log(item + " hello");
+    });
+  };
+  logItems<string>(["apple", "banana", "cherry"]);
+
   //
 }
