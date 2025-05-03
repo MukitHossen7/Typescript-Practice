@@ -10,6 +10,15 @@
   console.log(value1);
   const value2 = createArray<boolean>(true);
   console.log(value2);
+  type User = {
+    name: string;
+    age: number;
+  };
+  const value3 = createArray<User>({
+    name: "John Doe",
+    age: 30,
+  });
+  console.log(value3);
 
   //   const add = <T extends number, Y extends number>(
   //     num1: T,
@@ -40,5 +49,33 @@
   };
   logItems<string>(["apple", "banana", "cherry"]);
 
-  //
+  const addCourse = <T>(student: T) => {
+    const courseName = "Next Level Web Development";
+    return {
+      ...student,
+      courseName,
+    };
+  };
+  interface Student1 {
+    name: string;
+    email: string;
+  }
+  const student1 = addCourse<Student1>({
+    name: "Mukit Hossen",
+    email: "mukit@gmail.com",
+  });
+  console.log(student1);
+
+  interface Student2 {
+    name: string;
+    email: string;
+    role: string;
+  }
+
+  const student2 = addCourse<Student2>({
+    name: "Raju Hossain",
+    email: "raju@gamil.com",
+    role: "junior developer",
+  });
+  console.log(student2);
 }
