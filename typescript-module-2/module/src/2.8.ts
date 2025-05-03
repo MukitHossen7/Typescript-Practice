@@ -23,5 +23,22 @@
 
   //Fetch Real Data
 
+  type TodoData = {
+    userId: number;
+    id: number;
+    title: string;
+    completed: boolean;
+  };
+  const fetchData = async (): Promise<TodoData> => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+    const data: TodoData = await res.json();
+    return data;
+  };
+  const displayData = async () => {
+    const data = await fetchData();
+    console.log(data);
+  };
+  displayData();
+
   //
 }
