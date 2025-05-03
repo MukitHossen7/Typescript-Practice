@@ -12,13 +12,24 @@
   const booleans: Generic<boolean> = [true, false, true];
   console.log(booleans);
 
+  type MixArray<T, X, Y> = Array<T | X | Y>;
+  const mixArray: MixArray<string, number, boolean> = [
+    1,
+    "apple",
+    true,
+    2,
+    "banana",
+    false,
+  ];
+  console.log(mixArray);
+
   //// Generic type with multiple types
-  type GenericArrayOfObjects<T> = Array<T>;
-  const user: Generic<{
+  type User = {
     name: string;
     age: number;
     isMarried: boolean;
-  }> = [
+  };
+  const user: Generic<User> = [
     {
       name: "John",
       age: 30,
@@ -36,10 +47,19 @@
   type GenericTuple<T, U> = [T, U];
   const names: GenericTuple<string, string> = ["John", "Doe"];
   console.log(names);
-  const mixTuple: GenericTuple<number, { name: string; email: string }> = [
+  interface GenericObj {
+    name: string;
+    email: string;
+  }
+  const mixTuple: GenericTuple<number, GenericObj> = [
     1245,
     { name: "John", email: "john@gmail.com" },
   ];
   console.log(mixTuple);
+
+  type String<T> = T;
+  const str: String<string> = "Hello World";
+  console.log(str);
+
   //
 }
