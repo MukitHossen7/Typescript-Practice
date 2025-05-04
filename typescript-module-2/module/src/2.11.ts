@@ -50,4 +50,23 @@
   };
   console.log(readOnlyPerson.age);
   // readOnlyPerson.age = 50
+
+  type Obj = {
+    a: string;
+    b: string;
+  };
+
+  type RecordType = Record<string, string>;
+  const obj: RecordType = {
+    a: "aa",
+    b: "bb",
+    c: "cc",
+    d: "dd",
+  };
+  const myObject: Record<string, unknown> = {};
+  myObject.name = "Mukit";
+  myObject.age = 12;
+  myObject.isMarried = true;
+
+  console.log(myObject);
 }
