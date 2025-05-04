@@ -15,4 +15,13 @@
     isSingle: true,
   };
   console.log(pickObj);
+
+  type OmitPerson = Omit<Person, "email">;
+  const omitPerson: OmitPerson = {
+    name: "Hello",
+    age: 22,
+    isSingle: true,
+    contactNo: "4455555",
+  };
+  console.log(omitPerson);
 }
