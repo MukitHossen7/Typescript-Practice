@@ -39,4 +39,15 @@
     name: "Mukit",
   };
   console.log(partialPerson);
+  console.log(requiredPerson.age);
+  type ReadOnlyPerson = Readonly<Person>;
+  const readOnlyPerson: ReadOnlyPerson = {
+    name: "Hello",
+    age: 22,
+    isSingle: true,
+    contactNo: "4455555",
+    email: "he@gmail.com",
+  };
+  console.log(readOnlyPerson.age);
+  // readOnlyPerson.age = 50
 }
