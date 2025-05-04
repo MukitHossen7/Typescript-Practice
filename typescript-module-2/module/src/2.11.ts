@@ -34,4 +34,9 @@
     email: "he@gmail.com",
   };
   console.log(requiredPerson);
+  type PartialPerson = Partial<Person>;
+  const partialPerson: PartialPerson = {
+    name: "Mukit",
+  };
+  console.log(partialPerson);
 }
