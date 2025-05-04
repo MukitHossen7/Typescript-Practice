@@ -23,5 +23,27 @@
   };
   console.log(typeofFunction2(2, 8));
   console.log(typeofFunction2(2, "8"));
+
+  // in Guard
+  type Student = {
+    name: string;
+    age: number;
+    studentId: number;
+  };
+  type Teacher = {
+    name: string;
+    age: number;
+    role: string;
+  };
+  const identifyPerson = (obj: Student | Teacher): string => {
+    if ("studentId" in obj) {
+      return `${obj.name} is a student.Her/Him student Id ${obj.studentId}`;
+    } else {
+      return `${obj.name} is a Teacher.He/she is a ${obj.role} Teacher`;
+    }
+  };
+  console.log(identifyPerson({ name: "Mim", age: 24, studentId: 5213 }));
+  console.log(identifyPerson({ name: "Titly", age: 28, role: "Math" }));
+
   //
 }
