@@ -6,7 +6,7 @@
     age: number;
     email?: string;
     isSingle: boolean;
-    contactNo: string;
+    contactNo?: string;
   };
 
   type PickPerson = Pick<Person, "contactNo" | "isSingle">;
@@ -24,4 +24,14 @@
     contactNo: "4455555",
   };
   console.log(omitPerson);
+
+  type RequiredPerson = Required<Person>;
+  const requiredPerson: RequiredPerson = {
+    name: "Hello",
+    age: 22,
+    isSingle: true,
+    contactNo: "4455555",
+    email: "he@gmail.com",
+  };
+  console.log(requiredPerson);
 }
