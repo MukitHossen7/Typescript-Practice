@@ -66,5 +66,29 @@
     console.log(obj.getArea());
   };
   showShape(rectangle);
+
+  class Animal {
+    makeSound() {
+      console.log("some animale create sound");
+    }
+  }
+  class Dog extends Animal {
+    makeSound() {
+      console.log("barking the dog");
+    }
+  }
+  class Cat extends Animal {
+    makeSound() {
+      console.log("Meaow the Cat");
+    }
+  }
+  const animale1 = new Animal();
+  const animale2 = new Dog();
+  const animale3 = new Cat();
+  const createSound = (sound: Animal) => {
+    sound.makeSound();
+  };
+  createSound(animale3);
+
   //
 }
