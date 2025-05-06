@@ -10,11 +10,14 @@
       this.year = year;
       this.color = color;
     }
-    startEngine() {
-      console.log("Engine started!");
+    get startEngine() {
+      return "Engine started!";
     }
     stopEngine() {
       console.log("Engine stopped! " + this.year);
+    }
+    set hondaPrice(price: number) {
+      console.log(`This is Honda Price ${price}`);
     }
   }
   class Honda extends Car {
@@ -27,6 +30,7 @@
   }
   const honda = new Car("Honda", "honda2015", 2015, "red");
 
-  console.log(honda);
-  console.log(honda.stopEngine());
+  console.log(honda.startEngine);
+  honda.hondaPrice = 200000;
+  // console.log(honda.stopEngine());
 }
