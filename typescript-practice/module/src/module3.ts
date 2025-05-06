@@ -36,4 +36,37 @@
     false
   );
   raju.sleep(8);
+
+  //Inheritance
+  class Student extends Person {
+    constructor(
+      name: string,
+      age: number,
+      address: {
+        capital: string;
+        district: string;
+      },
+      isMarried: boolean,
+      public email: string,
+      public role: string
+    ) {
+      super(name, age, address, isMarried);
+    }
+    identity() {
+      console.log(
+        `My Name is ${this.name}. I am a student. I am learning ${this.role}. I am ${this.isMarried} person`
+      );
+    }
+  }
+
+  const mim = new Student(
+    "Min",
+    25,
+    { capital: "Dhaka", district: "Narsingdi" },
+    false,
+    "mim@gmail.com",
+    "Frontend Developer"
+  );
+  mim.sleep(10);
+  mim.identity();
 }
