@@ -49,4 +49,15 @@
     },
   };
   students(student1, "name");
+
+  class Animal {
+    sound() {
+      console.log("some sound");
+    }
+  }
+  const makeSound = <T extends Animal>(animal: T) => {
+    animal.sound();
+  };
+  class Dog extends Animal {}
+  makeSound(new Dog());
 }
