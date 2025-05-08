@@ -1,9 +1,9 @@
 // Problem 1
 // function formatString(input: string, toUpper?: boolean): string {
 //   if (input && toUpper === false) {
-//     return input.toLocaleLowerCase();
+//     return input.toLowerCase();
 //   } else {
-//     return input.toLocaleUpperCase();
+//     return input.toUpperCase();
 //   }
 // }
 // console.log(formatString("Hello"));
@@ -78,27 +78,55 @@
 // console.log(processValue(10));
 
 // Problem 6:
-interface Product {
-  name: string;
-  price: number;
-}
+// interface Product {
+//   name: string;
+//   price: number;
+// }
 
-function getMostExpensiveProduct(products: Product[]): Product | null {
-  if (products.length > 0) {
-    const sorted = products.sort((a, b) => b.price - a.price);
-    return sorted[0];
-  }
-  return null;
-}
+// function getMostExpensiveProduct(products: Product[]): Product | null {
+//   if (products.length > 0) {
+//     const sorted = products.sort((a, b) => b.price - a.price);
+//     return sorted[0];
+//   }
+//   return null;
+// }
 
-const products = [
-  { name: "Pen", price: 10 },
-  { name: "Notebook", price: 25 },
-  { name: "Bag", price: 50 },
-  { name: "MaceBook", price: 5000000 },
-  { name: "Laptop", price: 50000 },
-  { name: "Mobile", price: 150000 },
-];
+// const products = [
+//   { name: "Pen", price: 10 },
+//   { name: "Notebook", price: 25 },
+//   { name: "Bag", price: 50 },
+//   { name: "MaceBook", price: 5000000 },
+//   { name: "Laptop", price: 50000 },
+//   { name: "Mobile", price: 150000 },
+// ];
 
-console.log(getMostExpensiveProduct(products));
+// console.log(getMostExpensiveProduct(products));
 // console.log(getMostExpensiveProduct([]));
+
+//Problem 7:
+
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+function getDayType(day: Day): string {
+  if (day === Day.Sunday || day === Day.Saturday) {
+    return "Weekend";
+  } else {
+    return "Weekday";
+  }
+}
+
+console.log(getDayType(Day.Monday));
+console.log(getDayType(Day.Tuesday));
+console.log(getDayType(Day.Wednesday));
+console.log(getDayType(Day.Thursday));
+console.log(getDayType(Day.Friday));
+console.log(getDayType(Day.Saturday));
+
+console.log(getDayType(Day.Sunday));
