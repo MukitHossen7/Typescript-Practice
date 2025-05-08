@@ -105,28 +105,43 @@
 
 //Problem 7:
 
-enum Day {
-  Monday,
-  Tuesday,
-  Wednesday,
-  Thursday,
-  Friday,
-  Saturday,
-  Sunday,
-}
-function getDayType(day: Day): string {
-  if (day === Day.Sunday || day === Day.Saturday) {
-    return "Weekend";
-  } else {
-    return "Weekday";
-  }
-}
+// enum Day {
+//   Monday,
+//   Tuesday,
+//   Wednesday,
+//   Thursday,
+//   Friday,
+//   Saturday,
+//   Sunday,
+// }
+// function getDayType(day: Day): string {
+//   if (day === Day.Sunday || day === Day.Saturday) {
+//     return "Weekend";
+//   } else {
+//     return "Weekday";
+//   }
+// }
 
-console.log(getDayType(Day.Monday));
-console.log(getDayType(Day.Tuesday));
-console.log(getDayType(Day.Wednesday));
-console.log(getDayType(Day.Thursday));
-console.log(getDayType(Day.Friday));
-console.log(getDayType(Day.Saturday));
+// console.log(getDayType(Day.Monday));
+// console.log(getDayType(Day.Tuesday));
+// console.log(getDayType(Day.Wednesday));
+// console.log(getDayType(Day.Thursday));
+// console.log(getDayType(Day.Friday));
+// console.log(getDayType(Day.Saturday));
 
-console.log(getDayType(Day.Sunday));
+// console.log(getDayType(Day.Sunday));
+
+//Problem 8:
+async function squareAsync(n: number): Promise<number> {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (n >= 0) {
+        resolve(n * n);
+      } else {
+        reject("Error : Negative number not allowed");
+      }
+    }, 1000);
+  });
+}
+// squareAsync(3).then(console.log);
+squareAsync(-2).catch(console.error);
