@@ -2,6 +2,7 @@ export class Person {
   private name: string;
   private age: number | string;
   private country: string;
+public is single : boolean;
   constructor(name: string, age: number | string, country: string) {
     this.name = name;
     this.age = age;
