@@ -10,7 +10,7 @@ public is single : boolean;
     this.isSingle = isSingle;
   }
   user(): string {
-    return `Name: ${this.name}, Age: ${this.age}, Country: ${this.country}`;
+    return `Name: ${this.name}, Age: ${this.age}, Country: ${this.country}, Single: ${this.isSingle}`;
   }
 }
 
