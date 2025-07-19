@@ -4,6 +4,9 @@
   console.log(length); // Output: 38
 let message2:string = "Hello Developer"
 let message3: number = 6*5
+console.log(message2)
+console.log(message3)
+
 
 
   let someData: unknown = 12345;
