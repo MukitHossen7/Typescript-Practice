@@ -2,6 +2,7 @@
   let massage: any = "Hello World! This is a test message.";
   const length = (massage as string).length;
   console.log(length); // Output: 38
+let message2 = "Hello Developer"
 
   let someData: unknown = 12345;
   let num = someData as number;
