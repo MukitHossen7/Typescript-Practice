@@ -36,4 +36,9 @@
   console.log(ranju.play());
 
 const mukit = new Person("Mukit", 25, "football game");
+
+  console.log(mukit);
+  console.log(mukit.name);
+  console.log(mukit.play());
+
 }
