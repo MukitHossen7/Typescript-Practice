@@ -17,7 +17,7 @@
     constructor(
       public name: string,
       public age: number,
-      public playGame: string
+      public playGame: string 
     ) {}
     play() {
       return `My name is ${this.name}. My age is ${this.age}.I am playing ${this.playGame}`;
